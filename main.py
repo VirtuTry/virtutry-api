@@ -1,7 +1,10 @@
-from fastapi import FastAPI
+from flask import Flask, jsonify
 
-app = FastAPI()
+app = Flask(__name__)
 
-@app.get("/")
-def root():
-    return {"message": "VirtuTry API Online!"}
+@app.route("/")
+def home():
+    return jsonify({"status": "VirtuTry API online", "version": "v1"})
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=10000)
