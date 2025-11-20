@@ -1,6 +1,2 @@
-fastapi
-uvicorn
-python-multipart
-Pillow
-transformers
-torch
+flask
+gunicorn
